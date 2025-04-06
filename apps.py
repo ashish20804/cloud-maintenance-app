@@ -27,11 +27,11 @@ def send_email_alert(subject, body, to):
         email = EmailMessage()
         email.set_content(body)
         email['Subject'] = subject
-        email['From'] = "your_email@gmail.com"         # Change this
-        email['To'] = to
+        email['From'] = "22bce024@nirmauni.ac.in"         # Change this
+        email['To'] = 22bce024@nirmauni.ac.in
 
         server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        server.login("your_email@gmail.com", "your_password")  # Use app password or secure way
+        server.login("22bce024@nirmauni.ac.in", "Ba@11223")  # Use app password or secure way
         server.send_message(email)
         server.quit()
         st.success("Alert email sent successfully!")
