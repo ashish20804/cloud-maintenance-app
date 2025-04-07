@@ -27,11 +27,11 @@ def send_email_alert(subject, body, to):
         email = EmailMessage()
         email.set_content(body)
         email['Subject'] = subject
-        email['From'] = "abhedi16@gmail.com"         # Change this
-        email['To'] = abhedi16@gmail.com
+        email['From'] = "your@gmail.com"         # Change this
+        email['To'] = "your@gmail.com"
 
         server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        server.login("abhedi16@gmail.com", "ashishkamini")  # Use app password or secure way
+        server.login("your@gmail.com", "xyz")  # Use app password or secure way
         server.send_message(email)
         server.quit()
         st.success("Alert email sent successfully!")
@@ -93,7 +93,7 @@ if prediction == 1:
         send_email_alert(
             subject="⚠️ Predictive Maintenance Alert!",
             body=f"Failure predicted at:\nTemperature: {temp}\nVibration: {vib}\nPressure: {pres}",
-            to="receiver_email@example.com"  # Change this
+            to="receiver_email@example.com"  
         )
 else:
     st.success("System is Healthy ✅")
